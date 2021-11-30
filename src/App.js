@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { RecoilRoot } from 'recoil';
+import Character from './components/map/Character';
+import GardenDoor from './components/Garden/map/Door'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <div className="App">
+        <h1>GardenDoor</h1>
+        <GardenDoor />
+        <Character />
+      </div>
+    </RecoilRoot>
   );
 }
 
