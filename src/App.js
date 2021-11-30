@@ -1,7 +1,7 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
 import Character from './components/map/Character';
-import GardenDoor from './components/Garden/map/Door'
+import GardenDoor from './components/map/GardenDoor'
 
 function App() {
   return (

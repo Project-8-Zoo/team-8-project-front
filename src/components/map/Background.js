@@ -1,6 +1,6 @@
 import React from 'react';
-import {grass, door} from '../assets/images.js';
-import {MAP_SIZE, TILE_ASPECT_RATIO} from '../constant'
+import {grass, door} from '../../assets/images';
+import {MAP_SIZE, TILE_ASPECT_RATIO} from '../../constant'
 import Tile from './Tile';
 
 function Background() {

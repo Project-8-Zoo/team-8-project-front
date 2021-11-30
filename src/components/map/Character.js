@@ -1,6 +1,6 @@
 import React from "react";
 import { atom, useRecoilValue } from "recoil";
-import { dog } from "../assets/images";
+import { dog } from "../../assets/images";
 
 
 function Character() {
