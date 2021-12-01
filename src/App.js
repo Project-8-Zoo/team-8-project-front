@@ -1,15 +1,25 @@
 import React from 'react';
-import { RecoilRoot } from 'recoil';
+import { RecoilRoot } from 'recoil'
+import './App.css';
 import Character from './components/map/Character';
 import GardenDoor from './components/map/GardenDoor'
+import Navbar from './components/ui/Navbar';
+import Questions from './components/ui/Questions';
 
 function App() {
   return (
     <RecoilRoot>
       <div className="App">
-        <h1>GardenDoor</h1>
+        <div className="GameContainer">
+          <Navbar/>
+        <div className="LowerContainer">
+        <Questions />
+        <div className="MapContainer">
         <GardenDoor />
         <Character />
+        </div>
+        </div>
+        </div>
       </div>
     </RecoilRoot>
   );
