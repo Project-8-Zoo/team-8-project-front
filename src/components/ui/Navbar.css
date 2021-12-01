@@ -1,0 +1,47 @@
+.NavContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: xx-small;
+    justify-content: space-evenly;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.Menu {
+    display: flexbox;
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    
+}
+.Score {
+    display: flexbox;
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    
+}
+.Time {
+    display: flexbox;
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.HiScore {
+    display: flexbox;
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
