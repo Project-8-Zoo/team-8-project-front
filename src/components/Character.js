@@ -4,11 +4,10 @@ import './Character.css'
 
 
 function Character({char}) {
-    console.log(char)
     const yBase = char.y * 20;
-    const xBase = 1 * 20;
+    const xBase = char.x * 10;
     const yAbs = yBase + (100 / 16);
-    const xAbs = xBase + (100 / 16) * char.x;
+    const xAbs = xBase + (100 / 16)
     let src = dog
     return (
         <img
@@ -21,6 +20,7 @@ function Character({char}) {
                 position: 'relative',
                 left: `${xAbs}%`,
                 top: `${yAbs}%`,
+                zIndex: 1,
                 height: '30px',
                 width: '30px'
             }}

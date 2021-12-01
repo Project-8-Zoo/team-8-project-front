@@ -14,7 +14,6 @@ function App() {
         <Questions />
         <div className="MapContainer">
         <GardenDoor />
-        <Character />
         </div>
         </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Background from './Background';
 import Character from './Character';
 
-function Map({char, setChar}) {
+function Map({char}) {
     return (
         <div
             id="map"
@@ -16,8 +16,8 @@ function Map({char, setChar}) {
                 height: '320px',
             }}
         >
+            <Character char={char} />
             <Background />
-            <Character char={char} setChar={setChar}/>
         </div>
     )
 }
