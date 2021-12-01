@@ -4,7 +4,7 @@ import './Questions.css';
 import API from "../../utils/API.js";
 
 function Questions(props) {
-  const [quest, setQuest] = useState();
+  const [quest, setQuest] = useState({});
 
 
   const grabQuest = (query) =>
@@ -17,17 +17,7 @@ function Questions(props) {
     console.log(e.target.value);
   }
 
-  const {
-    Animal = "",
-    Questions = [
-      {
-        qid = "",
-        quest = "",
-        answer = [],
-        correct = "",
-      }
-    ]
-  } = result;
+ 
 
   return (
     <body className="CardContainer">
