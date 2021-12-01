@@ -1,23 +1,14 @@
 import React from "react";
-import { atom, useRecoilValue } from "recoil";
-import { dog } from "../../assets/images";
+import { dog } from "../assets/images";
+import './Character.css'
 
 
-function Character() {
-    const CharState = atom({
-        key: "charState",
-        default: {
-            x: 1,
-            y: 2,
-
-
-        }
-    });
-    const { x, y } = useRecoilValue(CharState);
-    const yBase = y * 20;
+function Character({char}) {
+    console.log(char)
+    const yBase = char.y * 20;
     const xBase = 1 * 20;
     const yAbs = yBase + (100 / 16);
-    const xAbs = xBase + (100 / 16) * x;
+    const xAbs = xBase + (100 / 16) * char.x;
     let src = dog
     return (
         <img
@@ -27,6 +18,7 @@ function Character() {
             y={yAbs}
             className='character'
             style={{
+                position: 'relative',
                 left: `${xAbs}%`,
                 top: `${yAbs}%`,
                 height: '30px',

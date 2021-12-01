@@ -1,7 +1,8 @@
 import React from "react";
 import Background from './Background';
+import Character from './Character';
 
-function Map() {
+function Map({char, setChar}) {
     return (
         <div
             id="map"
@@ -16,8 +17,9 @@ function Map() {
             }}
         >
             <Background />
+            <Character char={char} setChar={setChar}/>
         </div>
     )
 }
 
-export default Map
+export default Map;
