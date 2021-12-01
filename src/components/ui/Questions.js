@@ -4,12 +4,23 @@ import './Questions.css';
 import API from "../../utils/API.js";
 
 function Questions(props) {
-  const [quest, setQuest] = useState();
+  const questState = {
+    Animal: "",
+    Questions: [
+      {
+        qid: "",
+        quest: "",
+        answer: [],
+        correct: "",
+      }
+    ]
+  } ;
+  const [quest, setQuest] = useState(questState);
 
 
   const grabQuest = (query) =>
     API.search(query)
-      .then((res) => setResult(res.data))
+      .then((res) => setQuest(res.data))
       .catch((err) => console.log(err));
 
   const handleInputChange = (e) => {
@@ -17,17 +28,6 @@ function Questions(props) {
     console.log(e.target.value);
   }
 
-  const {
-    Animal = "",
-    Questions = [
-      {
-        qid = "",
-        quest = "",
-        answer = [],
-        correct = "",
-      }
-    ]
-  } = result;
 
   return (
     <body className="CardContainer">
