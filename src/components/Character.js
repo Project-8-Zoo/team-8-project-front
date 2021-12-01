@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD:src/components/map/Character.js
 import { dog } from "../../assets/images";
+=======
+import { dog } from "../assets/images";
+>>>>>>> fb603b3fd13cd9965c04245445ee547c7830c197:src/components/Character.js
 import './Character.css'
 
 
