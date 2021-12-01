@@ -1,7 +1,12 @@
 import React from "react";
 import './Questions.css';
+import API from "../../api/API.js"; 
 
 function Questions() {
+
+
+
+
   return (
     <body className="CardContainer">
     <div id="QCard">
