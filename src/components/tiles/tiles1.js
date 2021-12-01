@@ -1,0 +1,1 @@
+export const tiles1 = [['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass',], ['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass',], ['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass',], ['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'door',]]
