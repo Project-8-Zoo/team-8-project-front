@@ -17,7 +17,14 @@ const API = {
     },
     signup: (usrData) =>{
         return axios.post(`${URL_PREFIX}/signup`,usrData)
-    }
+    },
+    quest: () => {
+        return axios.get(`${URL_PREFIX}/questions`)
+    },
+    animal: () => {
+        return axios.get(`${URL_PREFIX}/animals`)
+    },
+
 };
 
 export default API;
