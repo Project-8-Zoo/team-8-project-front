@@ -1,14 +1,12 @@
 import React from 'react';
-import { RecoilRoot } from 'recoil'
 import './App.css';
-import Character from './components/map/Character';
-import GardenDoor from './components/map/GardenDoor'
+import Character from './components/Character';
+import GardenDoor from './components/GardenDoor'
 import Navbar from './components/ui/Navbar';
 import Questions from './components/ui/Questions';
 
 function App() {
   return (
-    <RecoilRoot>
       <div className="App">
         <div className="GameContainer">
           <Navbar/>
@@ -16,12 +14,10 @@ function App() {
         <Questions />
         <div className="MapContainer">
         <GardenDoor />
-        <Character />
         </div>
         </div>
         </div>
       </div>
-    </RecoilRoot>
   );
 }
 
