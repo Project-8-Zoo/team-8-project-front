@@ -97,6 +97,7 @@ function App() {
       console.log(res.data.id)
       setToken(res.data.token)
       localStorage.setItem("token", res.data.token)
+      window.location.href="/"
     }).catch(err => {
       console.log(err);
     })
