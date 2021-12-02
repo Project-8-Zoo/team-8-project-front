@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 import API from './utils/API';
+
+import {BrowserRouter as Router, Switch,Route,Link,Redirect} from "react-router-dom"
+import Navbar from './components/Navbar/Navbar';
+import Homepage from './components/Homepage/Homepage';
 import Profile from "./components/Profile";
 import SignupForm from "./components/SignupForm"
 import LoginForm from './components/LoginForm';
 import Character from './components/Character';
 import GardenDoor from './components/GardenDoor'
-import Navbar from './components/ui/Navbar';
 import Questions from './components/ui/Questions';
 
 import './App.css';
@@ -131,8 +134,8 @@ function App() {
   }
 
   return (
-    <>
-    <div>
+    <Router>
+    {/* <div>
       {!userState.username ? (
         <div>
           <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} />
@@ -157,8 +160,34 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-      </>
+      </div> */}
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+        <div className="GameContainer">
+          <div className="LowerContainer">
+            <Questions />
+            <div className="MapContainer">
+              <GardenDoor />
+            </div>
+          </div>
+        </div>
+  
+        </Route>
+
+        <Route exact path="/login">
+        <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} />
+          
+
+        </Route>
+
+        <Route exact path="/signup">
+        <SignupForm submit={handleSignupSubmit} change={handleSignupChange} signupState={signupFormState} />
+          
+        </Route>
+
+      </Switch>
+      </Router>
   );
 }
 
