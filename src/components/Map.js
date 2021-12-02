@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Background from './Background';
 import Character from './Character';
 import { tiles1 } from './tiles/tiles1';
-import { tiles2 } from './tiles/tiles2';
+import { tiles3 } from './tiles/tiles3';
+
 
 
 function Map({char, setChar}) {
-    const [tiles, setTiles] = useState(tiles1)
+    const [tiles, setTiles] = useState(tiles3)
     return (
         <div
             id="map"

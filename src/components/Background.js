@@ -1,5 +1,5 @@
 import React from 'react';
-import { grass, door } from '../assets/images';
+import { grass, door, lama } from '../assets/images';
 import Tile from './Tile';
 import {tiles2} from './tiles/tiles2';
 import { tiles1 } from './tiles/tiles1';
@@ -29,6 +29,9 @@ function Background({tiles, char, setTiles, setChar}) {
                     } else if (tile === 'door') {
                         src = door
                         z = 2
+                    }else if (tile === 'lama') {
+                        src = lama
+                        z=0
                     }
                     return <Tile key={`${x}${y}`} src={src} x={xAbs} y={yAbs} zLevel={z} />
                 })
