@@ -22,4 +22,4 @@ function GardenDoor() {
     )
 }
 
-export default GardenDoor
+export default GardenDoor;

@@ -6,7 +6,7 @@ const URL_PREFIX = "http://localhost:3001";
 
 const API = {
     getProfile: (tkn) => {
-        return axios.get(`${URL_PREFIX}/profile`, {
+        return axios.get(`${URL_PREFIX}/`, {
             headers: {
                 "Authorization": `Bearer ${tkn}`
             }
@@ -40,3 +40,4 @@ const API = {
 };
 
 export default API;
+
