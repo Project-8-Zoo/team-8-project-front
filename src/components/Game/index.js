@@ -7,12 +7,7 @@ function Game() {
     return (
         <div className="GameContainer">
           <div className="LowerContainer">
-            <div className="QuestionsContainer">
-            <Questions />
-            </div>
-            <div className="MapContainer">
               <GardenDoor />
-            </div>
           </div>
         </div>
     )

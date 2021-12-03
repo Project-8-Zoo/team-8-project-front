@@ -13,7 +13,9 @@ function GardenDoor() {
     const [char, setChar] = useState(charState)
     return (
         <>
+        <div className="QuestionsContainer">
             <Questions tiles={tiles}/>
+        </div>
             <div className="MapContainer">
                 <Map char={char} setChar={setChar} tiles={tiles} setTiles={setTiles}/>
             </div>
