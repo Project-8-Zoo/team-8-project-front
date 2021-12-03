@@ -21,6 +21,18 @@ const API = {
     quest: () => {
         return axios.get(`${URL_PREFIX}/questions`)
     },
+    llama: () => {
+        return axios.get(`${URL_PREFIX}/llama`)
+    },
+    arfox: () => {
+        return axios.get(`${URL_PREFIX}/arfox`)
+    },
+    gorilla: () => {
+        return axios.get(`${URL_PREFIX}/gorilla`)
+    },
+    boa: () => {
+        return axios.get(`${URL_PREFIX}/boa`)
+    },
     animal: () => {
         return axios.get(`${URL_PREFIX}/animals`)
     },

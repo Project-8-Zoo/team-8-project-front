@@ -143,57 +143,57 @@ function App() {
 
   return (
     <Router>
-      
+
       {!token ? (
         <div>
           <div className="navbar">
-        <div>
-            <Link className="navTitle" to="/game">ZooSchool</Link>
-        </div>
+            <div>
+              <Link className="navTitle" to="/game">ZooSchool</Link>
+            </div>
 
-        <div className="navLinks">
-        {/* {userState.username}  */}
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Signup</Link>
+            <div className="navLinks">
+              {/* {userState.username}  */}
+              <Link to="/">Home</Link>
+              <Link to="/login">Login</Link>
+              <Link to="/signup">Signup</Link>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-        ):(
+      ) : (
         <div>
-  <div className="navbar">
-        <div>
-            <Link className="navTitle" to="/game">ZooSchool</Link>
-        </div>
+          <div className="navbar">
+            <div>
+              <Link className="navTitle" to="/game">ZooSchool</Link>
+            </div>
 
-        <div className="navLinks">
-        {/* {userState.username}  */}
-        <Link to="/">Home</Link>
-      
+            <div className="navLinks">
+              {/* {userState.username}  */}
+              <Link to="/">Home</Link>
+
+            </div>
+          </div>
+
         </div>
-        </div>
-        
-      </div>
       )}
 
       <Switch>
         <Route exact path="/login">
-        {!token? <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} /> : <Redirect to="/game"/>}
-      </Route>
+          {!token ? <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} /> : <Redirect to="/game" />}
+        </Route>
 
-      <Route exact path="/signup">
-        <SignupForm submit={handleSignupSubmit} change={handleSignupChange} signupState={signupFormState} />
-      </Route>
+        <Route exact path="/signup">
+          <SignupForm submit={handleSignupSubmit} change={handleSignupChange} signupState={signupFormState} />
+        </Route>
 
-      <Route exact path="/">
-        <Homepage />
-      </Route>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
 
-      <Route exact path="/game">
-      {token?<Game user={userState} token={token}/>:<Redirect to="/login"/>}
-        <button onClick={logMeOut} >Logout</button>
-        
-      </Route>
+        <Route exact path="/game">
+          {token ? <Game user={userState} token={token} /> : <Redirect to="/login" />}
+          <button onClick={logMeOut} >Logout</button>
+
+        </Route>
 
       </Switch>
     </Router>

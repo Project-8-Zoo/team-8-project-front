@@ -12,6 +12,10 @@ function Background({tiles, char, setTiles, setChar}) {
     }
     if(tiles[0][0]=== 'door' && char.x <= -4 && char.y <= 1){
         setChar({x: char.x+1, y: char.y+1})
+        setTiles(tiles3)
+    }
+    if(tiles[3][6]=== 'llama' && char.x <= -4 && char.y <= 1){
+        setChar({x: char.x+1, y: char.y+1})
         setTiles(tiles1)
     }
     return (

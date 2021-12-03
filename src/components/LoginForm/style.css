@@ -1,3 +1,4 @@
+
 .LoginForm {
     border:2px solid rgb(177, 171, 171);
     background: #1f80db;
@@ -44,4 +45,8 @@
     background-color: rgb(34, 228, 8);
     color:aliceblue;
     cursor: pointer;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dev
