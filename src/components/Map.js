@@ -7,8 +7,8 @@ import { tiles2 } from './tiles/tiles2';
 
 
 
-function Map({char, setChar}) {
-    const [tiles, setTiles] = useState(tiles3)
+function Map({char, setChar,tiles, setTiles}) {
+    // const [tiles, setTiles] = useState(tiles3)
     return (
         <div
             id="map"
@@ -23,7 +23,7 @@ function Map({char, setChar}) {
             }}
         >
             <Character char={char} />
-            <Background tiles={tiles} setTiles={setTiles} char={char} setChar={setChar} setQuest={setQuest}/>
+            <Background tiles={tiles} setTiles={setTiles} char={char} setChar={setChar} />
             
         </div>
     )

@@ -167,10 +167,7 @@ function App() {
         <Route exact path="/">
         <div className="GameContainer">
           <div className="LowerContainer">
-            <Questions />
-            <div className="MapContainer">
               <GardenDoor />
-            </div>
           </div>
         </div>
   

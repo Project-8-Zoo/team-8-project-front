@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import './Questions.css';
 import API from "../../utils/API.js";
 
+
 function Questions({tiles}) {
   let questState = {
     animal: "",
@@ -16,11 +17,21 @@ function Questions({tiles}) {
     ]
 };
 const [quest, setQuest] = useState(questState);
+const [i, setI] = useState(0)
+
 
 
   const grabllama = (query) => {API.llama(query)
       .then((res) =>{ 
-        console.log(res.data[0])
+        setQuest({
+        animal: res.data[0].animal,
+        questions: res.data[0].questions
+        
+        })})
+      .catch ((err) => console.log(err))};
+
+  const grabBoa = (query) => {API.boa(query)
+      .then((res) =>{ 
         setQuest({
         animal: res.data[0].animal,
         questions: res.data[0].questions
@@ -32,29 +43,34 @@ const [quest, setQuest] = useState(questState);
     API.gorilla(query)
       .then((res) => setQuest({animal: res.data[0].animal,}))
       .catch ((err) => console.log(err));
-     
-  const grabBoa = (query) =>
-    API.boa(query)
-      .then((res) => setQuest({animal: res.data[0].animal,}))
-      .catch ((err) => console.log(err));
-     
+          
   const grabArfox = (query) =>
     API.arfox(query)
       .then((res) => setQuest({animal: res.data[0].animal,}))
       .catch ((err) => console.log(err));
+
  useEffect(() => {
-    if(tiles[0][0] === 'door'){
-      grabllama()
+    if(tiles[3][6]=== 'llama'){
+      setI(0)
+     return grabllama()
+    }else if(tiles[1][5]=== 'boa'){
+      setI(0)
+      return grabBoa()
     }
  }, [tiles])
  
 
 
-const onClick = (e) => {
-  if (quest.answer[e] == quest.correct) {
 
-
-  }
+const OnClick = (e) => {
+    if(i===quest.questions.length-1){
+     return  console.log('yeet')
+    } else if (e.target.textContent == quest.questions[i].correct) {
+      setI(i+1)
+      console.log(i)
+    } else if (e.target.textContent !== quest.questions[i].correct) {
+      setI(i+1)
+      console.log(i)}
   //if clikced anwer = corrt then point, else, no point
   //add 1 to question index
 }
@@ -68,13 +84,14 @@ return (
           <h1>{quest.animal}</h1>
         </div>
         {/* what the question */}
-        <p>{quest.questions[0].quest}</p>
+        <p>{quest.questions[i].quest}</p>
 
-        <div className="answerContainer">
+        <div className="answerContainer btn">
           {/* answer form */}
           {
-                  quest.questions[0].answer.map((ans) =>{
-                 return <button onClick>{ans}</button>})
+                  quest.questions[i].answer.map((ans) =>{
+                 
+                 return <button onClick={OnClick}>{ans}</button>})
           }
 
         </div>
