@@ -11,6 +11,9 @@ import LoginForm from './components/LoginForm';
 import Character from './components/Character';
 import GardenDoor from './components/GardenDoor'
 import Questions from './components/ui/Questions';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 import './App.css';
 const axios = require("axios");
@@ -33,9 +36,7 @@ function App() {
   })
 
   // highscore in state
-  const [highscore, setHighscore] = useState({
-    highscore: 0
-  });
+  // const [highscore, setHighscore] = useState(0);
 
   useEffect(() => {
     const myToken = localStorage.getItem("token");
