@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Character from './components/Character';
 import GardenDoor from './components/GardenDoor'
 import Navbar from './components/ui/Navbar';
-import Questions from './components/ui/Questions';
 
 function App() {
   return (
@@ -11,10 +10,7 @@ function App() {
         <div className="GameContainer">
           <Navbar/>
         <div className="LowerContainer">
-        <Questions />
-        <div className="MapContainer">
-        <GardenDoor />
-        </div>
+        <GardenDoor/>
         </div>
         </div>
       </div>

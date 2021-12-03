@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import Background from './Background';
 import Character from './Character';
-import { tiles1 } from './tiles/tiles1';
 import { tiles2 } from './tiles/tiles2';
 
 
-function Map({char, setChar}) {
-    const [tiles, setTiles] = useState(tiles1)
+function Map({char, setChar, setQuest, tiles, setTiles}) {
     return (
         <div
             id="map"
@@ -21,7 +19,7 @@ function Map({char, setChar}) {
             }}
         >
             <Character char={char} />
-            <Background tiles={tiles} setTiles={setTiles} char={char} setChar={setChar}/>
+            <Background tiles={tiles} setTiles={setTiles} char={char} setChar={setChar} setQuest={setQuest}/>
             
         </div>
     )
