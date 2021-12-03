@@ -6,8 +6,8 @@ body {
   
   #QCard {
     position: relative;
-    height:300px;
-    width: 200px;
+    height:320px;
+    width: 210px;
     background-color: rgb(246, 25, 25);
     margin: 0 auto;
     border-radius: 8%;
@@ -34,8 +34,8 @@ body {
   }
 
   .answerContainer {
-      margin-top: 44%;
-      padding: 40px;
+      margin-top: 10%;
+      padding: 10px;
       text-align: center;
       border-radius: 0px 0px 19.5px 19.5px;
   }
