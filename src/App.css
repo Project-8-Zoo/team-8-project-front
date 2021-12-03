@@ -27,27 +27,35 @@
 
 .GameContainer {
   display: flex;
+  width: auto;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   padding: 25px;
 }
 
 .LowerContainer {
   display: flex;
   flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  /* border: 2px solid greenyellow; */
 }
 
-h2 {
-  padding: 25px;
-  background-color: rgb(255, 102, 0);
-}
-h3 {
-  padding: 25px;
-  background-color: rgb(123, 255, 0);
+.QuestionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: s;
+  /* border: 2px solid cyan; */
 }
 
 .MapContainer {
  display: flex;
- width: 500px;
+ flex-wrap: wrap;
+ align-content: center;
+ justify-content: center;
+ width: 800px;
  height:auto;
+ /* border: 2px solid purple; */
 
 }

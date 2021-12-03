@@ -1,5 +1,5 @@
 import React from 'react';
-import { grass, door, hpath, llama, mtn, tree, boa } from '../assets/images';
+import { grass, door, hpath, llama, mtn, tree, boa, junglea8, junglea7, waterfall } from '../assets/images';
 import Tile from './Tile';
 import {tiles2} from './tiles/tiles2';
 import { tiles1 } from './tiles/tiles1';
@@ -47,6 +47,18 @@ function Background({tiles, char, setTiles, setChar}) {
                     }
                     else if (tile === 'boa') {
                         src = boa
+                        z = 0
+                    }
+                    else if (tile === 'junglea8') {
+                        src = junglea8
+                        z = 0
+                    }
+                    else if (tile === 'junglea7') {
+                        src = junglea7
+                        z = 0
+                    }
+                    else if (tile === 'waterfall') {
+                        src = waterfall
                         z = 0
                     }
                     return <Tile key={`${x}${y}`} src={src} x={xAbs} y={yAbs} zLevel={z} />

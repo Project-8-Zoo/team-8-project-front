@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 import API from './utils/API';
 
-import {BrowserRouter as Router, Switch,Route,Link,Redirect} from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom"
 import Navbar from './components/Navbar/Navbar';
-import Homepage from './components/Homepage/Homepage';
-import Profile from "./components/Profile";
+import Game from './components/Game'
+import Homepage from './components/Homepage/index';
+// import Profile from "./components/Profile";
 import SignupForm from "./components/SignupForm"
 import LoginForm from './components/LoginForm';
-import Character from './components/Character';
-import GardenDoor from './components/GardenDoor'
-import Questions from './components/ui/Questions';
+// import Character from './components/Character';
+// import GardenDoor from './components/GardenDoor'
+// import Questions from './components/ui/Questions';
 
 import './App.css';
-const axios = require("axios");
+// const axios = require("axios");
 
 function App() {
   const [userState, setUserState] = useState({
@@ -42,7 +43,7 @@ function App() {
     console.log("use effected")
     if (myToken) {
       API.getProfile(myToken).then(res => {
-        console.log("workded")
+        console.log("worked")
         console.log(res)
         setToken(myToken)
         setUserState({
@@ -97,7 +98,8 @@ function App() {
       console.log(res.data.id)
       setToken(res.data.token)
       localStorage.setItem("token", res.data.token)
-      window.location.href="/"
+      localStorage.setItem("username", res.data.user)
+      window.location.href = "/game"
     }).catch(err => {
       console.log(err);
     })
@@ -117,6 +119,9 @@ function App() {
         console.log(res.data.id)
         setToken(res.data.token)
         localStorage.setItem("token", res.data.token)
+        localStorage.setItem("username", res.data.user)
+        // window.location.href = "/game"
+        window.alert("You have logged in. Navigate to Zooschool game")
       }).catch(err => {
         console.log(err);
       })
@@ -127,68 +132,71 @@ function App() {
 
   const logMeOut = () => {
     setUserState({
-      email: "",
+      username: "",
       id: 0
     });
     setToken("");
     localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    // window.location.href = "/home"
   }
 
   return (
     <Router>
-    {/* <div>
-      {!userState.username ? (
+      
+      {!token ? (
         <div>
-          <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} />
-          <SignupForm submit={handleSignupSubmit} change={handleSignupChange} signupState={signupFormState} />
-          </div>
-      ) : (
+          <div className="navbar">
         <div>
-           <h1>Welcome, {userState.username} !!</h1>
-          <button onClick={logMeOut} >Logout</button>
-          <Profile highscore={setHighscore}/>
-          </div>
+            <Link className="navTitle" to="/game">ZooSchool</Link>
+        </div>
+
+        <div className="navLinks">
+        {/* {userState.username}  */}
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Signup</Link>
+        </div>
+        </div>
+        </div>
+        ):(
+        <div>
+  <div className="navbar">
+        <div>
+            <Link className="navTitle" to="/game">ZooSchool</Link>
+        </div>
+
+        <div className="navLinks">
+        {/* {userState.username}  */}
+        <Link to="/">Home</Link>
+      
+        </div>
+        </div>
+        
+      </div>
       )}
 
-    <div className="App">
-    </div>
-        <div className="GameContainer">
-          <Navbar />
-          <div className="LowerContainer">
-            <Questions />
-            <div className="MapContainer">
-              <GardenDoor />
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <Navbar />
       <Switch>
-        <Route exact path="/">
-        <div className="GameContainer">
-          <div className="LowerContainer">
-            <Questions />
-            <div className="MapContainer">
-              <GardenDoor />
-            </div>
-          </div>
-        </div>
-  
-        </Route>
-
         <Route exact path="/login">
-        <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} />
-          
+        {!token? <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} /> : <Redirect to="/game"/>}
+      </Route>
 
-        </Route>
-
-        <Route exact path="/signup">
+      <Route exact path="/signup">
         <SignupForm submit={handleSignupSubmit} change={handleSignupChange} signupState={signupFormState} />
-          
-        </Route>
+      </Route>
+
+      <Route exact path="/">
+        <Homepage />
+      </Route>
+
+      <Route exact path="/game">
+      {token?<Game user={userState} token={token}/>:<Redirect to="/login"/>}
+        <button onClick={logMeOut} >Logout</button>
+        
+      </Route>
 
       </Switch>
-      </Router>
+    </Router>
   );
 }
 
