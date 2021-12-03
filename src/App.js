@@ -136,32 +136,6 @@ function App() {
 
   return (
     <Router>
-    {/* <div>
-      {!userState.username ? (
-        <div>
-          <LoginForm submit={handleLoginSubmit} change={handleLoginChange} loginState={loginFormState} />
-          <SignupForm submit={handleSignupSubmit} change={handleSignupChange} signupState={signupFormState} />
-          </div>
-      ) : (
-        <div>
-           <h1>Welcome, {userState.username} !!</h1>
-          <button onClick={logMeOut} >Logout</button>
-          <Profile highscore={setHighscore}/>
-          </div>
-      )}
-
-    <div className="App">
-    </div>
-        <div className="GameContainer">
-          <Navbar />
-          <div className="LowerContainer">
-            <Questions />
-            <div className="MapContainer">
-              <GardenDoor />
-            </div>
-          </div>
-        </div>
-      </div> */}
       <Navbar />
       <Switch>
         <Route exact path="/">

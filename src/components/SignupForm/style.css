@@ -1,3 +1,47 @@
 .SignupForm {
-    background: yellowgreen
+    border:2px solid rgb(177, 171, 171);
+    background: #262737;
+    padding:50px;
+}
+
+.SignUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:500px;
+}
+
+.SignupContainer {
+    display: flex;
+    padding:10px;
+
+}
+
+.userSign, .passSign {
+    display: flex;
+    flex-direction: column;
+    padding:8px;
+    width: 300px;
+    height: 30px;
+    margin:10px;
+    font-size: 18px;
+
+}
+
+.SignupBtn {
+    padding: 5px;
+    color:rgb(7, 7, 7);
+    background-color: rgb(153, 153, 153);
+    border-radius: 15px 15px 15px 15px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.SignupBtn:hover {
+    background-color: rgb(152, 93, 207);
+    color:aliceblue;
+    cursor: pointer;
 }
