@@ -1,4 +1,6 @@
+import React from 'react';
 import  { useEffect, useCallback} from "react";
+import ArrowsIcon from "./ArrowsIcon";
 
 function Inputs({char, setChar}) {
 
@@ -43,7 +45,9 @@ function Inputs({char, setChar}) {
     };
   }, [char]);
 
-  return '';
+  return (<></>
+  );
+
 }
 
 export default Inputs;
