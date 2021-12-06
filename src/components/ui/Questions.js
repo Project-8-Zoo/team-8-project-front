@@ -125,13 +125,13 @@ function Questions({ tiles, highscore, setHighscore }) {
 
     <body className="CardContainer">
       
-        <h3>Current Score :{score}</h3>
        
+      <h3 className="Score">Score: {score}</h3>
       <div id="QCard">
         <div class="interior">
           <div className="interiorTitle">
             {/*animal*/}
-            <h1>{quest.animal}</h1>
+            <h1 className="AnimalName">{quest.animal}</h1>
 
           </div>
 
@@ -139,13 +139,13 @@ function Questions({ tiles, highscore, setHighscore }) {
           {i === quest.questions.length ? (
             <div className="answerContainer">{
 
-              <p>Completed</p>
+              <p>Success</p>
             }
             </div>
           ) : (
             <div className="answerContainer">
               {/* what the question */}
-              <p>{quest.questions[i].quest}</p>
+              <p className="AnswerText">{quest.questions[i].quest}</p>
               {
 
                 quest.questions[i].answer.map((ans) => {
@@ -160,7 +160,10 @@ function Questions({ tiles, highscore, setHighscore }) {
 
         </div>
 
-      </div>
+        
+        
+           
+        </div>
     </body>
   );
 }
