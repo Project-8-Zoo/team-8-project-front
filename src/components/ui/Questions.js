@@ -12,7 +12,7 @@ function Questions({ tiles, highscore, setHighscore }) {
     questions: [
       {
         qid: "",
-        quest: ``,
+        quest: `Can you find all four enclosers`,
         answer: [],
         correct: ''
       }
@@ -69,44 +69,57 @@ function Questions({ tiles, highscore, setHighscore }) {
   useEffect(() => {
     if (tiles[3][5] === 'llama') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabllama()
     } else if (tiles[1][5] === 'boa') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabBoa()
     } else if (tiles[0][1] === 'jungled2') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabGorilla()
     } else if (tiles[3][0] === 'arcticpenguin') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabArfox()
     } else {
       setI(0)
+      localStorage.setItem('score',JSON.stringify(score))  
       setQuest(questState)
+      
+      if(localStorage.getItem(highscore)<localStorage.getItem(score))
+      {
+        setHighscore(score)
+      }
+      localStorage.setItem('highscore',JSON.stringify(highscore))
     }
   }, [tiles])
 
 
 
 
-  const OnClick = async (e) => {
-    if (i === quest.questions.length) {
-      return localStorage.setItem('highscore',JSON.stringify(highscore))      
+  const OnClick =  (e) => {
+   if ( i === quest.questions.length) {
+      return      
     } else if (e.target.textContent == quest.questions[i].correct) {
       setI(i + 1)
       setScore(score + 1)
-
-       localStorage.setItem('score',JSON.stringify(score))  
     
     } else if (e.target.textContent !== quest.questions[i].correct) {
       setI(i + 1)
 
-    }else{
-      setHighscore(score)
-      localStorage.setItem('highscore',JSON.stringify(highscore))
-
     }
 
   }
+
+
+
+
 
   return (
 
