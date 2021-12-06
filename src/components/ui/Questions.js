@@ -93,7 +93,7 @@ function Questions({ tiles, highscore, setHighscore }) {
   return (
 
     <body className="CardContainer">
-      <div>{i},{highscore}</div>
+      <div>{highscore}</div>
       <div id="QCard">
         <div class="interior">
           <div className="interiorTitle">
