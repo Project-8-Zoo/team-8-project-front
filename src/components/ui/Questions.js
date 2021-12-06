@@ -78,7 +78,7 @@ const OnClick = (e) => {
 return (
   <body className="CardContainer">
     <div id="QCard">
-      <div class="interior">
+      <div className="interior">
         <div className="interiorTitle">
           {/*animal*/}
           <h1>{quest.animal}</h1>
