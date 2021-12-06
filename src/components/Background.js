@@ -13,7 +13,7 @@ function Background({ tiles, char, setTiles, setChar }) {
         //from home to llama
 
         setChar({ x: char.x - 1, y: char.y - 1 })
-        setTiles(tiles1)
+        setTiles(tiles5)
     }
     if (tiles[0][0] === 'door' && char.x <= -4 && char.y <= 1) {
         //from home to gorilla
@@ -37,7 +37,12 @@ function Background({ tiles, char, setTiles, setChar }) {
         //from gorlla to fox
 
         setChar({ x: char.x + 1, y: char.y + 1 })
-        setTiles(tiles5)
+        setTiles(tiles1)
+    }
+    if (tiles[0][0] === 'arcticmtn' && char.x <= -4 && char.y <= 1){
+        setChar({ x: char.x + 1, y: char.y + 1 })
+        setTiles(tiles3)
+
     }
     return (
         <div>

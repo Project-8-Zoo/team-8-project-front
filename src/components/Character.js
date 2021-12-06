@@ -7,7 +7,7 @@ function Character({char}) {
     const xBase = char.x * 10;
     const yAbs = yBase + (100 / 16);
     const xAbs = xBase + (100 / 16);
-    let src;
+    let src = dog
     if(char.dir === 1){
         src = dog
     }else if (char.dir === 2){
