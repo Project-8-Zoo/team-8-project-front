@@ -20,8 +20,9 @@ function Questions({ tiles, highscore, setHighscore }) {
   };
   const [quest, setQuest] = useState(questState);
   const [i, setI] = useState(0)
+  const [score, setScore] = useState(0)
 
- 
+
 
   const grabllama = (query) => {
     API.llama(query)
@@ -47,15 +48,23 @@ function Questions({ tiles, highscore, setHighscore }) {
       .catch((err) => console.log(err))
   };
 
-  const grabGorilla = (query) =>
+  const grabGorilla = (query) => {
     API.gorilla(query)
-      .then((res) => setQuest({ animal: res.data[0].animal, }))
-      .catch((err) => console.log(err));
+      .then((res) => setQuest({
+        animal: res.data[0].animal,
+        questions: res.data[0].questions
+      }))
+      .catch((err) => console.log(err))
+  };
 
-  const grabArfox = (query) =>
+  const grabArfox = (query) => {
     API.arfox(query)
-      .then((res) => setQuest({ animal: res.data[0].animal, }))
-      .catch((err) => console.log(err));
+      .then((res) => setQuest({
+        animal: res.data[0].animal,
+        questions: res.data[0].questions
+      }))
+      .catch((err) => console.log(err))
+  };
 
   useEffect(() => {
     if (tiles[3][5] === 'llama') {
@@ -64,7 +73,13 @@ function Questions({ tiles, highscore, setHighscore }) {
     } else if (tiles[1][5] === 'boa') {
       setI(0)
       return grabBoa()
-    }else{
+    } else if (tiles[0][1] === 'jungled2') {
+      setI(0)
+      return grabGorilla()
+    } else if (tiles[3][0] === 'arcticpenguin') {
+      setI(0)
+      return grabArfox()
+    } else {
       setI(0)
       setQuest(questState)
     }
@@ -73,19 +88,22 @@ function Questions({ tiles, highscore, setHighscore }) {
 
 
 
-  const OnClick = (e) => {
+  const OnClick = async (e) => {
     if (i === quest.questions.length) {
-      console.log('yeet')
-      return 
+      return localStorage.setItem('highscore',JSON.stringify(highscore))      
     } else if (e.target.textContent == quest.questions[i].correct) {
       setI(i + 1)
-      setHighscore(highscore + 1)
-      console.log(i)
-      console.log(highscore)
+      setScore(score + 1)
+
+       localStorage.setItem('score',JSON.stringify(score))  
+    
     } else if (e.target.textContent !== quest.questions[i].correct) {
       setI(i + 1)
-      console.log(i)
-      console.log(highscore)
+
+    }else{
+      setHighscore(score)
+      localStorage.setItem('highscore',JSON.stringify(highscore))
+
     }
 
   }
@@ -93,7 +111,9 @@ function Questions({ tiles, highscore, setHighscore }) {
   return (
 
     <body className="CardContainer">
-      <div>{highscore}</div>
+      
+        <h3>Current Score :{score}</h3>
+       
       <div id="QCard">
         <div class="interior">
           <div className="interiorTitle">
@@ -117,7 +137,7 @@ function Questions({ tiles, highscore, setHighscore }) {
 
                 quest.questions[i].answer.map((ans) => {
 
-                  return <button className="btn" onClick={OnClick}>{ans}</button>
+                  return <button className="AnswerBtn" onClick={OnClick}>{ans}</button>
                 })
               }
             </div>

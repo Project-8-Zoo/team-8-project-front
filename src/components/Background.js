@@ -1,30 +1,43 @@
 import React from 'react';
 import { arcticmtn, arcticpond, arcticladder, arcticladderrght, arcticpenguin, arcticice, arcticwater, grass, door, hpath, xpath, llama, mtn, tree, boa, junglea1, junglea2, junglea3, junglea4, jungleb1, jungleb3, jungleb4, jungleb5, junglea8, junglea7, jungleb8, junglec2, junglec3, junglec4, junglec6, junglec8, jungled2, jungled3, jungled4, jungmtn, jungmtnd5, jungmtnd8, lakelft, lakerght, waterfall, zoofount, zoobldg, zoogifts, zootckts } from '../assets/images';
 import Tile from './Tile';
-import {tiles2} from './tiles/tiles2';
+import { tiles2 } from './tiles/tiles2';
 import { tiles1 } from './tiles/tiles1';
 import { tiles3 } from './tiles/tiles3';
 import { tiles4 } from './tiles/tiles4';
 import { tiles5 } from './tiles/tiles5';
 
-function Background({tiles, char, setTiles, setChar}) {
-    if(tiles[3][7]=== 'door' && char.x >= 1.5 && char.y >= 3){
+
+function Background({ tiles, char, setTiles, setChar }) {
+    if (tiles[3][7] === 'door' && char.x >= 1.5 && char.y >= 3) {
         //from home to llama
-      
-        setChar({x: char.x-1, y: char.y-1})
+
+        setChar({ x: char.x - 1, y: char.y - 1 })
         setTiles(tiles2)
     }
-    if(tiles[0][0]=== 'door' && char.x <= -4 && char.y <= 1){
-        //from boa to home
-        
-        setChar({x: char.x+1, y: char.y+1})
+    if (tiles[0][0] === 'door' && char.x <= -4 && char.y <= 1) {
+        //from home to gorilla
+
+        setChar({ x: char.x + 1, y: char.y + 1 })
         setTiles(tiles3)
     }
-    if(tiles[3][5]=== 'llama' && char.x <= -4 && char.y <= 1){
+    if (tiles[3][5] === 'llama' && char.x <= -4 && char.y <= 1) {
         //from llama to boa
-        
-        setChar({x: char.x+1, y: char.y+1})
+
+        setChar({ x: char.x + 1, y: char.y + 1 })
         setTiles(tiles1)
+    }
+    if (tiles[0][1] === 'jungled2' && char.x <= -4 && char.y <= 1) {
+        //gorilla to llama
+
+        setChar({ x: char.x + 1, y: char.y + 1 })
+        setTiles(tiles4)
+    }
+    if (tiles[1][5] === 'boa' && char.x <= -4 && char.y <= 1) {
+        //from gorlla to fox
+
+        setChar({ x: char.x + 1, y: char.y + 1 })
+        setTiles(tiles5)
     }
     return (
         <div>
