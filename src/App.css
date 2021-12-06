@@ -1,6 +1,9 @@
 .App {
   text-align: center;
+  background-color: #1f56c6;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -27,25 +30,26 @@
 
 .GameContainer {
   display: flex;
+  flex-wrap: wrap;
   width: auto;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   padding: 25px;
+  background-color: #7c6f8a;
 }
 
 .LowerContainer {
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-content: center;
   /* border: 2px solid greenyellow; */
 }
 
 .QuestionsContainer {
   display: flex;
   flex-wrap: wrap;
-  align-items: s;
+  padding-left:50px;
+  padding-right:10px;
   /* border: 2px solid cyan; */
 }
 
@@ -54,8 +58,20 @@
  flex-wrap: wrap;
  align-content: center;
  justify-content: center;
- width: 800px;
+ width: 600px;
+ margin-right: 0px;
  height:auto;
  /* border: 2px solid purple; */
 
+}
+
+.LogoutBtn {
+  background-color: transparent;
+  border: 0px ;
+  font-size: 21px;
+  color: rgb(255, 255, 255);
+}
+
+.LogoutBtn:hover {
+ color:greenyellow;
 }
