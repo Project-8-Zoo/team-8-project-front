@@ -8,7 +8,7 @@ body {
   #QCard {
     position: relative;
     height:300px;
-    width: 160px;
+    width: 200px;
     background-color: rgb(38, 39, 55);
     color:whitesmoke;
     margin: 0 auto;
@@ -29,15 +29,15 @@ body {
   .interiorTitle{
       display: flex;
       flex-direction: column;
+      text-align: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 5px;
       border-radius: 21px 21px 0px 0px;
       padding: 15px;
   }
 
   .answerContainer {
-      margin-top: 10%;
-      padding: 10px;
+      margin-top: 5%;
       text-align: center;
       border-radius: 0px 0px 19.5px 19.5px;
       display: flex;
@@ -45,6 +45,8 @@ body {
       flex-wrap: wrap;
       justify-content: center;
   }
+
+  
 
   .btn {
     background-color: #EA4C89;
@@ -58,41 +60,6 @@ body {
     touch-action: manipulation;
   }
   
-  
-  #spade{
-    font-size: 60px;
-    margin: auto;
-  }
-  
-  .small-spade {
-    position: absolute;
-    font-size: 22px;
-  }
-  
-  .left {
-    left:12px;
-    top: 35px;
-  }
-  
-  .right {
-    left: 175px;
-    top: 200px;
-  }
-  
-  #ace-left {
-    position: absolute;
-    font-size: 30px;
-    top: 8px;
-    left: 12px;
-  }
-  
-  #ace-right {
-    position: absolute;
-    font-size: 30px;
-    top: 260px;
-    left: 175px;;
-  }
-  
   .AnswerBtn {
     border-radius: 10px 10px 10px 10px;
     background-color: rgb(252, 252, 252);
@@ -103,4 +70,26 @@ body {
   .AnswerBtn:hover {
     background-color: rgb(14, 255, 1);
     cursor: pointer;
+  }
+
+  .Score {
+    background-color: #7c6f8a;
+    font-weight: bold;
+    color:#FFFFFF;
+    padding-top: 1px;
+  }
+
+  .CardContainer {
+    background-color: #7c6f8a;
+  }
+
+  .AnswerText {
+    font-size: 20px;
+    color:#ae81d5;
+    font-weight: bold;
+
+  }
+
+  .AnimalName {
+    font-size: 25px;
   }
