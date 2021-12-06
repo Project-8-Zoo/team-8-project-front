@@ -13,7 +13,7 @@ function Background({ tiles, char, setTiles, setChar }) {
         //from home to llama
 
         setChar({ x: char.x - 1, y: char.y - 1 })
-        setTiles(tiles2)
+        setTiles(tiles1)
     }
     if (tiles[0][0] === 'door' && char.x <= -4 && char.y <= 1) {
         //from home to gorilla
@@ -25,7 +25,7 @@ function Background({ tiles, char, setTiles, setChar }) {
         //from llama to boa
 
         setChar({ x: char.x + 1, y: char.y + 1 })
-        setTiles(tiles1)
+        setTiles(tiles2)
     }
     if (tiles[0][1] === 'jungled2' && char.x <= -4 && char.y <= 1) {
         //gorilla to llama
