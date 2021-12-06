@@ -45,7 +45,47 @@ function Inputs({char, setChar}) {
     };
   }, [char]);
 
-  return (<></>
+  return (
+    <div className="buttons w-100">
+      <div className="arrows">
+      </div>
+      <div className="flex justify-between">
+        <div
+          onClick={() => {
+            keyPressHandler({ keyCode: 37 });
+          }}
+          className="button"
+        >
+          LEFT
+        </div>
+        <div
+          onClick={() => {
+            keyPressHandler({ keyCode: 38 });
+          }}
+          className="button"
+        >
+          UP
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <div
+          onClick={() => {
+            keyPressHandler({ keyCode: 40 });
+          }}
+          className="button"
+        >
+          DOWN
+        </div>
+        <div
+          onClick={() => {
+            keyPressHandler({ keyCode: 39 });
+          }}
+          className="button"
+        >
+          RIGHT
+        </div>
+      </div>
+    </div>
   );
 
 }
