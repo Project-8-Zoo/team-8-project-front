@@ -93,12 +93,9 @@ function Questions({ tiles, highscore, setHighscore }) {
       return localStorage.setItem('highscore',JSON.stringify(highscore))      
     } else if (e.target.textContent == quest.questions[i].correct) {
       setI(i + 1)
-     setScore(score + 1)
+      setScore(score + 1)
 
-      
        localStorage.setItem('score',JSON.stringify(score))  
-     
-      
     
     } else if (e.target.textContent !== quest.questions[i].correct) {
       setI(i + 1)
