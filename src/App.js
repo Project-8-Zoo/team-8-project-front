@@ -34,9 +34,7 @@ function App() {
   })
 
   // highscore in state
-  const [highscore, setHighscore] = useState({
-    highscore: 0
-  });
+  // const [highscore, setHighscore] = useState(0);
 
   useEffect(() => {
     const myToken = localStorage.getItem("token");
