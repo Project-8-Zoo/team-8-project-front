@@ -12,7 +12,11 @@ function Questions({ tiles, highscore, setHighscore }) {
     questions: [
       {
         qid: "",
+<<<<<<< HEAD
         quest: `Can you find all 4 animals`,
+=======
+        quest: `Can you find all four enclosers`,
+>>>>>>> dev
         answer: [],
         correct: ''
       }
@@ -69,56 +73,69 @@ function Questions({ tiles, highscore, setHighscore }) {
   useEffect(() => {
     if (tiles[3][5] === 'llama') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabllama()
     } else if (tiles[1][5] === 'boa') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabBoa()
     } else if (tiles[0][1] === 'jungled2') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabGorilla()
     } else if (tiles[3][0] === 'arcticpenguin') {
       setI(0)
+      setHighscore(score)
+      localStorage.setItem('score',JSON.stringify(score))  
       return grabArfox()
     } else {
       setI(0)
+      localStorage.setItem('score',JSON.stringify(score))  
       setQuest(questState)
+      
+      if(localStorage.getItem(highscore)<localStorage.getItem(score))
+      {
+        setHighscore(score)
+      }
+      localStorage.setItem('highscore',JSON.stringify(highscore))
     }
   }, [tiles])
 
 
 
 
-  const OnClick = async (e) => {
-    if (i === quest.questions.length) {
-      return localStorage.setItem('highscore',JSON.stringify(highscore))      
+  const OnClick =  (e) => {
+   if ( i === quest.questions.length) {
+      return      
     } else if (e.target.textContent == quest.questions[i].correct) {
       setI(i + 1)
       setScore(score + 1)
-
-       localStorage.setItem('score',JSON.stringify(score))  
     
     } else if (e.target.textContent !== quest.questions[i].correct) {
       setI(i + 1)
-
-    }else{
-      setHighscore(score)
-      localStorage.setItem('highscore',JSON.stringify(highscore))
 
     }
 
   }
 
+
+
+
+
   return (
 
     <body className="CardContainer">
       
-        <h3>Current Score :{score}</h3>
        
+      <h3 className="Score">Score: {score}</h3>
       <div id="QCard">
         <div class="interior">
           <div className="interiorTitle">
             {/*animal*/}
-            <h1>{quest.animal}</h1>
+            <h1 className="AnimalName">{quest.animal}</h1>
 
           </div>
 
@@ -132,7 +149,7 @@ function Questions({ tiles, highscore, setHighscore }) {
           ) : (
             <div className="answerContainer">
               {/* what the question */}
-              <p>{quest.questions[i].quest}</p>
+              <p className="AnswerText">{quest.questions[i].quest}</p>
               {
 
                 quest.questions[i].answer.map((ans) => {
@@ -147,14 +164,10 @@ function Questions({ tiles, highscore, setHighscore }) {
 
         </div>
 
-        <div id="spade">
-          <span id="ace-left">A</span>
-
-          <span class="small-spade left">&spades;</span>
-          <span id="ace-right">A</span>
-          <span class="small-spade right">&spades;</span>
+        
+        
+           
         </div>
-      </div>
     </body>
   );
 }
