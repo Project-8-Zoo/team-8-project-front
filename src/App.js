@@ -118,7 +118,7 @@ function App() {
         setToken(res.data.token)
         localStorage.setItem("token", res.data.token)
         localStorage.setItem("username", res.data.user)
-        // window.location.href = "/game"
+        window.location.href = "/game"
         window.alert("You have logged in. Navigate to Zooschool game")
       }).catch(err => {
         console.log(err);

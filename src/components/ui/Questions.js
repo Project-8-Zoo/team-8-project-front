@@ -88,6 +88,7 @@ function Questions({ tiles, highscore, setHighscore }) {
       console.log(highscore)
     }
 
+<<<<<<< HEAD
   }
 
   return (
@@ -101,6 +102,18 @@ function Questions({ tiles, highscore, setHighscore }) {
             <h1>{quest.animal}</h1>
 
           </div>
+=======
+return (
+  <body className="CardContainer">
+    <div id="QCard">
+      <div className="interior">
+        <div className="interiorTitle">
+          {/*animal*/}
+          <h1>{quest.animal}</h1>
+        </div>
+        {/* what the question */}
+        <p>{quest.questions[i].quest}</p>
+>>>>>>> dev
 
           {/* answer form */}
           {i === quest.questions.length ? (
