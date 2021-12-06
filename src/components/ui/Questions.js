@@ -111,9 +111,9 @@ function Questions({ tiles, highscore, setHighscore }) {
   return (
 
     <body className="CardContainer">
-      <div>
+      
         <h3>Current Score :{score}</h3>
-        </div>
+       
       <div id="QCard">
         <div class="interior">
           <div className="interiorTitle">
@@ -137,7 +137,7 @@ function Questions({ tiles, highscore, setHighscore }) {
 
                 quest.questions[i].answer.map((ans) => {
 
-                  return <button className="btn" onClick={OnClick}>{ans}</button>
+                  return <button className="AnswerBtn" onClick={OnClick}>{ans}</button>
                 })
               }
             </div>
