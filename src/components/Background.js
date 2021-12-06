@@ -18,7 +18,7 @@ function Background({tiles, char, setTiles, setChar}) {
         //from boa to home
         
         setChar({x: char.x+1, y: char.y+1})
-        setTiles(tiles5)
+        setTiles(tiles3)
     }
     if(tiles[3][5]=== 'llama' && char.x <= -4 && char.y <= 1){
         //from llama to boa

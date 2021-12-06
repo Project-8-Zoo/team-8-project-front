@@ -1,6 +1,8 @@
 import grass from './imageassets/grass.png'
 import door from './imageassets/door.png'
-import dog from './imageassets/dog.png'
+import dog from './imageassets/dog1.png'
+import gorilla from './imageassets/gorilla.png'
+import fox from './imageassets/Fox.png'
 import hpath from './imageassets/hpath.png'
 import xpath from './imageassets/xpath.png'
 import llama from './imageassets/llama.gif'
@@ -44,6 +46,7 @@ import arcticice from './imageassets/arcticice.png'
 import arcticwater from './imageassets/arcticwater.png'
 import arcticladderrght from './imageassets/arcticladderrght.png'
 
+
 export {
     arcticladder,
     arcticladderrght,
@@ -55,6 +58,8 @@ export {
     grass,
     door,
     dog,
+    gorilla,
+    fox,
     hpath,
     xpath,
     llama,
