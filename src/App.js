@@ -165,12 +165,15 @@ function App() {
             <div>
               <Link className="navTitle" to="/game">ZooSchool</Link>
             </div>
+            
 
             <div className="navLinks">
               {/* {userState.username}  */}
               <Link to="/">Home</Link>
+              
 
             </div>
+            <button onClick={logMeOut} className="LogoutBtn" >Logout</button>
           </div>
 
         </div>
@@ -191,8 +194,7 @@ function App() {
 
         <Route exact path="/game">
           {token ? <Game user={userState} token={token} /> : <Redirect to="/login" />}
-          <button onClick={logMeOut} >Logout</button>
-
+         
         </Route>
 
       </Switch>
@@ -201,3 +203,5 @@ function App() {
 }
 
 export default App;
+
+

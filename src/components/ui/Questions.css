@@ -6,9 +6,10 @@ body {
   
   #QCard {
     position: relative;
-    height:320px;
-    width: 210px;
-    background-color: rgb(246, 25, 25);
+    height:300px;
+    width: 160px;
+    background-color: rgb(38, 39, 55);
+    color:whitesmoke;
     margin: 0 auto;
     border-radius: 8%;
     border: 2px solid black;
@@ -38,6 +39,10 @@ body {
       padding: 10px;
       text-align: center;
       border-radius: 0px 0px 19.5px 19.5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
   }
 
   
@@ -56,18 +61,18 @@ body {
   
   .left {
     left:12px;
-    top: 50px;
+    top: 35px;
   }
   
   .right {
     left: 175px;
-    top: 240px;
+    top: 200px;
   }
   
   #ace-left {
     position: absolute;
     font-size: 30px;
-    top: 18px;
+    top: 8px;
     left: 12px;
   }
   
@@ -78,3 +83,14 @@ body {
     left: 175px;;
   }
   
+  .AnswerBtn {
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(252, 252, 252);
+    width:auto;
+    height: auto;
+  }
+
+  .AnswerBtn:hover {
+    background-color: rgb(14, 255, 1);
+    cursor: pointer;
+  }

@@ -91,7 +91,7 @@ return (
           {
                   quest.questions[i].answer.map((ans) =>{
                  
-                 return <button onClick={OnClick}>{ans}</button>})
+                 return <button className="AnswerBtn" onClick={OnClick}>{ans}</button>})
           }
 
         </div>
