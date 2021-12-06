@@ -58,13 +58,14 @@ function Questions({ tiles, highscore, setHighscore }) {
       .catch((err) => console.log(err));
 
   useEffect(() => {
-    if (tiles[3][6] === 'llama') {
+    if (tiles[3][5] === 'llama') {
       setI(0)
       return grabllama()
     } else if (tiles[1][5] === 'boa') {
       setI(0)
       return grabBoa()
     }else{
+      setI(0)
       setQuest(questState)
     }
   }, [tiles])
@@ -74,7 +75,8 @@ function Questions({ tiles, highscore, setHighscore }) {
 
   const OnClick = (e) => {
     if (i === quest.questions.length) {
-      return console.log('yeet')
+      console.log('yeet')
+      return 
     } else if (e.target.textContent == quest.questions[i].correct) {
       setI(i + 1)
       setHighscore(highscore + 1)
@@ -82,7 +84,6 @@ function Questions({ tiles, highscore, setHighscore }) {
       console.log(highscore)
     } else if (e.target.textContent !== quest.questions[i].correct) {
       setI(i + 1)
-  
       console.log(i)
       console.log(highscore)
     }
