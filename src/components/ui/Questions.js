@@ -160,13 +160,6 @@ function Questions({ tiles, highscore, setHighscore }) {
 
         </div>
 
-        <div id="spade">
-          <span id="ace-left">A</span>
-
-          <span class="small-spade left">&spades;</span>
-          <span id="ace-right">A</span>
-          <span class="small-spade right">&spades;</span>
-        </div>
       </div>
     </body>
   );
