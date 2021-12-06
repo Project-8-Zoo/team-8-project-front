@@ -1,3 +1,4 @@
+
 body {
     margin: 0 auto;
     text-align:center;
@@ -40,14 +41,23 @@ body {
       border-radius: 0px 0px 19.5px 19.5px;
   }
 
+  .btn {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    transition: color 100ms;
+    vertical-align: baseline;
+    touch-action: manipulation;
+  }
   
-
+  
   #spade{
     font-size: 60px;
     margin: auto;
   }
-  
- 
   
   .small-spade {
     position: absolute;
