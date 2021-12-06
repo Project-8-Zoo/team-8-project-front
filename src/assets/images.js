@@ -1,12 +1,8 @@
 import grass from './imageassets/grass.png'
 import door from './imageassets/door.png'
-<<<<<<< HEAD
-import dog from './imageassets/dog.png'
-=======
 import dog from './imageassets/dog1.png'
 import gorilla from './imageassets/gorilla.png'
 import fox from './imageassets/Fox.png'
->>>>>>> dev
 import hpath from './imageassets/hpath.png'
 import xpath from './imageassets/xpath.png'
 import llama from './imageassets/llama.gif'
@@ -62,19 +58,13 @@ export {
     grass,
     door,
     dog,
-<<<<<<< HEAD
-=======
     gorilla,
     fox,
->>>>>>> dev
     hpath,
     xpath,
     llama,
     mtn,
     tree,
-<<<<<<< HEAD
-    boa
-=======
     boa,
     junglea1,
     junglea2,
@@ -105,5 +95,4 @@ export {
     zootckts,
     zoogifts,
     waterfall
->>>>>>> dev
 }
