@@ -1,5 +1,6 @@
 .NavContainer {
     display: flex;
+    width:max-content;
     flex-direction: row;
     font-size: xx-small;
     justify-content: space-evenly;
