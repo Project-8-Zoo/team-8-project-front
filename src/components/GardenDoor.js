@@ -6,7 +6,7 @@ import { tiles2 } from './tiles/tiles2';
 
 function GardenDoor() {
     const [tiles, setTiles] = useState(tiles2)
-     const [highscore, setHighscore] = useState(0);
+    const [highscore, setHighscore] = useState(0);
     const charState = {
         x: 1,
         y: 2,
@@ -15,13 +15,13 @@ function GardenDoor() {
     const [char, setChar] = useState(charState)
     return (
         <>
-        <div className="QuestionsContainer">
-            <Questions tiles={tiles} highscore={highscore} setHighscore={setHighscore}/>
-        </div>
-            <div className="MapContainer">
-                <Map char={char} setChar={setChar} tiles={tiles} setTiles={setTiles}/>
+            <div className="QuestionsContainer">
+                <Questions tiles={tiles} highscore={highscore} setHighscore={setHighscore} />
             </div>
-            <Inputs char={char} setChar={setChar} />
+            <div className="MapContainer">
+                <Map char={char} setChar={setChar} tiles={tiles} setTiles={setTiles} />
+                <Inputs char={char} setChar={setChar} />
+            </div>
         </>
     )
 }
