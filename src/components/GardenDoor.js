@@ -9,7 +9,8 @@ function GardenDoor() {
      const [highscore, setHighscore] = useState(0);
     const charState = {
         x: 1,
-        y: 2
+        y: 2,
+        dir: 1
     };
     const [char, setChar] = useState(charState)
     return (
