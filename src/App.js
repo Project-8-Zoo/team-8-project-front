@@ -107,6 +107,10 @@ function App() {
   const handleSignupSubmit = e => {
     e.preventDefault();
     API.signup(signupFormState).then(res => {
+      setLoginFormState({
+        username: res.data.user,
+        id: res.data.id
+      })
       API.login(loginFormState).then(res => {
         console.log(res.data)
         setUserState({
