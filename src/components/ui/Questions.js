@@ -72,7 +72,7 @@ function Questions({ tiles, highscore, setHighscore }) {
       setHighscore(score)
       localStorage.setItem('score',JSON.stringify(score))  
       return grabllama()
-    } else if (tiles[1][5] === 'boa') {
+    } else if (tiles[2][1] === 'boa') {
       setI(0)
       setHighscore(score)
       localStorage.setItem('score',JSON.stringify(score))  

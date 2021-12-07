@@ -1,13 +1,18 @@
 import React from "react";
-import { dog } from "../assets/images";
+import { dog, dogflipped } from "../assets/images";
 
 
 function Character({char}) {
     const yBase = char.y * 20;
     const xBase = char.x * 10;
     const yAbs = yBase + (100 / 16);
-    const xAbs = xBase + (100 / 16)
+    const xAbs = xBase + (100 / 16);
     let src = dog
+    if(char.dir === 1){
+        src = dog
+    }else if (char.dir === 2){
+        src = dogflipped
+    }
     return (
         <img
             alt='the character'

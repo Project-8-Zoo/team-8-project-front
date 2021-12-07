@@ -1,6 +1,7 @@
 import grass from './imageassets/grass.png'
 import door from './imageassets/door.png'
 import dog from './imageassets/dog1.png'
+import dogflipped from './imageassets/dogflipped.png'
 import gorilla from './imageassets/gorilla.png'
 import fox from './imageassets/Fox.png'
 import hpath from './imageassets/hpath.png'
@@ -58,6 +59,7 @@ export {
     grass,
     door,
     dog,
+    dogflipped,
     gorilla,
     fox,
     hpath,
