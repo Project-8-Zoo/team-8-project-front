@@ -111,20 +111,18 @@ function App() {
         username: res.data.user,
         id: res.data.id
       })
-      API.login(loginFormState).then(res => {
-        console.log(res.data)
-        console.log(res.data.user)
-        console.log(res.data.id)
-        setToken(res.data.token)
-        localStorage.setItem("token", res.data.token)
-        localStorage.setItem("username", res.data.user)
-        window.location.href = "/game"
-        window.alert("You have logged in. Navigate to Zooschool game")
+      setToken(res.data.token)
+      console.log(res.data)
+      console.log(res.data.user)
+      console.log(res.data.id)
+      localStorage.setItem("token", res.data.token)
+      localStorage.setItem("username", res.data.user)
+      window.location.href = "/game"
+      window.alert("You have logged in. Navigate to Zooschool game")
       }).catch(err => {
         console.log(err);
       })
       console.log(userState);
-    })
   }
 
 
