@@ -4,7 +4,6 @@ function Inputs({char, setChar}) {
 
   const keyPressHandler = useCallback(
     (e) => {
-      console.log(char);
       if (e.preventDefault) {
         e.preventDefault();
       }

@@ -1,3 +1,4 @@
+
 body {
     margin: 0 auto;
     text-align:center;
@@ -8,7 +9,8 @@ body {
     position: relative;
     height:300px;
     width: 200px;
-    background-color: rgb(246, 25, 25);
+    background-color: rgb(38, 39, 55);
+    color:whitesmoke;
     margin: 0 auto;
     border-radius: 8%;
     border: 2px solid black;
@@ -27,54 +29,67 @@ body {
   .interiorTitle{
       display: flex;
       flex-direction: column;
+      text-align: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 5px;
       border-radius: 21px 21px 0px 0px;
       padding: 15px;
   }
 
   .answerContainer {
-      margin-top: 44%;
-      padding: 40px;
+      margin-top: 5%;
       text-align: center;
       border-radius: 0px 0px 19.5px 19.5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
   }
 
   
 
-  #spade{
-    font-size: 60px;
-    margin: auto;
+  .btn {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    transition: color 100ms;
+    vertical-align: baseline;
+    touch-action: manipulation;
   }
   
- 
-  
-  .small-spade {
-    position: absolute;
-    font-size: 22px;
+  .AnswerBtn {
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(252, 252, 252);
+    width:auto;
+    height: auto;
   }
-  
-  .left {
-    left:12px;
-    top: 50px;
+
+  .AnswerBtn:hover {
+    background-color: rgb(14, 255, 1);
+    cursor: pointer;
   }
-  
-  .right {
-    left: 175px;
-    top: 240px;
+
+  .Score {
+    background-color: #7c6f8a;
+    font-weight: bold;
+    color:#FFFFFF;
+    padding-top: 1px;
   }
-  
-  #ace-left {
-    position: absolute;
-    font-size: 30px;
-    top: 18px;
-    left: 12px;
+
+  .CardContainer {
+    background-color: #7c6f8a;
   }
-  
-  #ace-right {
-    position: absolute;
-    font-size: 30px;
-    top: 260px;
-    left: 175px;;
+
+  .AnswerText {
+    font-size: 20px;
+    color:#ae81d5;
+    font-weight: bold;
+
   }
-  
+
+  .AnimalName {
+    font-size: 25px;
+  }
