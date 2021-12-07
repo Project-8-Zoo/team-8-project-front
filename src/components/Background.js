@@ -15,7 +15,7 @@ function Background({ tiles, char, setTiles, setChar }) {
         setChar({ x: char.x - 1, y: char.y - 1 })
         setTiles(tiles3)
     }
-    if (tiles[0][0] === 'door' && char.x <= -4 && char.y <= 1) {
+    if (tiles[2][1] === 'boa' && char.x <= -4 && char.y <= 1) {
         //from boa to gorilla
 
         setChar({ x: char.x + 1, y: char.y + 1 })
