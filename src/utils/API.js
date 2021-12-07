@@ -1,8 +1,8 @@
 import axios from "axios";
 //local
-const URL_PREFIX = "http://localhost:3001" || "https://zoo-school-back.herokuapp.com";
+// const URL_PREFIX = "http://localhost:3001";
 //deployed
-// const URL_PREFIX = "https://zoo-school-back.herokuapp.com";
+const URL_PREFIX = "https://zoo-school-back.herokuapp.com";
 
 const API = {
     getProfile: (tkn) => {
