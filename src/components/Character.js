@@ -1,6 +1,5 @@
 import React from "react";
 import { dog, dogflipped } from "../assets/images";
-import './Character.css'
 
 
 function Character({char}) {
