@@ -12,7 +12,7 @@ function Questions({ tiles, highscore, setHighscore }) {
     questions: [
       {
         qid: "",
-        quest: `Can you find all four enclosers`,
+        quest: `Can you find all four enclosures`,
         answer: [],
         correct: ''
       }
@@ -42,7 +42,6 @@ function Questions({ tiles, highscore, setHighscore }) {
         setQuest({
           animal: res.data[0].animal,
           questions: res.data[0].questions
-
         })
       })
       .catch((err) => console.log(err))
