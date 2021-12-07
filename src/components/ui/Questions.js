@@ -12,7 +12,7 @@ function Questions({ tiles, highscore, setHighscore }) {
     questions: [
       {
         qid: "",
-        quest: `Can you find all four enclosers`,
+        quest: `Can you find all four enclosures`,
         answer: [],
         correct: ''
       }
