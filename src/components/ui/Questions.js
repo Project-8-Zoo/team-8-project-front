@@ -87,6 +87,11 @@ function Questions({ tiles, highscore, setHighscore }) {
       setHighscore(score)
       localStorage.setItem('score',JSON.stringify(score))  
       return grabArfox()
+    } else if (tiles[0][1] === 'zoobldg') {
+      setI(0)
+      setHighscore(0)
+      localStorage.setItem('score',JSON.stringify(score))  
+      return grabArfox()
     } else {
       setI(0)
       localStorage.setItem('score',JSON.stringify(score))  
