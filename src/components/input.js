@@ -52,16 +52,16 @@ function Inputs({ char, setChar }) {
   return (
     <div className="buttons w-100">
       <div className="arrows">
-        <i className="arrow right"
-          onClick={() => {
-            keyPressHandler({ keyCode: 39 });
+          <i className="arrow up" onClick={() => {
+            keyPressHandler({ keyCode: 38 });
           }} />
         <div>
           <i className="arrow left" onClick={() => {
             keyPressHandler({ keyCode: 37 });
           }} />
-          <i className="arrow up" onClick={() => {
-            keyPressHandler({ keyCode: 38 });
+        <i className="arrow right"
+          onClick={() => {
+            keyPressHandler({ keyCode: 39 });
           }} />
         </div>
         <i className="arrow down"
