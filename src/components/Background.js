@@ -39,7 +39,7 @@ function Background({ tiles, char, setTiles, setChar }) {
         setChar({ x: char.x + 1, y: char.y + 1 })
         setTiles(tiles1)
     }
-    if (tiles[0][7] === 'door' && char.x <= -4 && char.y <= 1){
+    if (tiles[0][7] === 'door' && char.x <= 1.5 && char.y <= .5){
         //articfox to home
         setChar({ x: char.x + 1, y: char.y + 1 })
         setTiles(tiles2)
