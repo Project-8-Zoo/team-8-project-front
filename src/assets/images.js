@@ -1,14 +1,19 @@
 import grass from './imageassets/grass.png'
 import door from './imageassets/door.png'
+<<<<<<< HEAD
 import dog from './imageassets/dog1.png'
 import gorilla from './imageassets/gorilla.png'
 import fox from './imageassets/Fox.png'
+=======
+import dog from './imageassets/dog.png'
+>>>>>>> main
 import hpath from './imageassets/hpath.png'
 import xpath from './imageassets/xpath.png'
 import llama from './imageassets/llama.gif'
 import mtn from './imageassets/mtn.png'
 import tree from './imageassets/tree.png'
 import boa from './imageassets/boa.gif'
+<<<<<<< HEAD
 import junglea8 from './imageassets/jungle-a8.png'
 import junglea7 from './imageassets/junglea7.png'
 import waterfall from './imageassets/waterfall.gif'
@@ -46,6 +51,8 @@ import arcticice from './imageassets/arcticice.png'
 import arcticwater from './imageassets/arcticwater.png'
 import arcticladderrght from './imageassets/arcticladderrght.png'
 
+=======
+>>>>>>> main
 
 export {
     arcticladder,
@@ -58,13 +65,17 @@ export {
     grass,
     door,
     dog,
+<<<<<<< HEAD
     gorilla,
     fox,
+=======
+>>>>>>> main
     hpath,
     xpath,
     llama,
     mtn,
     tree,
+<<<<<<< HEAD
     boa,
     junglea1,
     junglea2,
@@ -95,4 +106,7 @@ export {
     zootckts,
     zoogifts,
     waterfall
+=======
+    boa
+>>>>>>> main
 }
