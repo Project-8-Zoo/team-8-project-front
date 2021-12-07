@@ -42,7 +42,6 @@ function Questions({ tiles, highscore, setHighscore }) {
         setQuest({
           animal: res.data[0].animal,
           questions: res.data[0].questions
-
         })
       })
       .catch((err) => console.log(err))

@@ -10,22 +10,22 @@ import { tiles5 } from './tiles/tiles5';
 
 function Background({ tiles, char, setTiles, setChar }) {
     if (tiles[3][7] === 'door' && char.x >= 1.5 && char.y >= 3) {
-        //from home to llama
+        //from home to gorilla
 
         setChar({ x: char.x - 1, y: char.y - 1 })
-        setTiles(tiles5)
+        setTiles(tiles3)
     }
     if (tiles[0][0] === 'door' && char.x <= -4 && char.y <= 1) {
-        //from home to gorilla
+        //from boa to gorilla
 
         setChar({ x: char.x + 1, y: char.y + 1 })
         setTiles(tiles3)
     }
     if (tiles[3][5] === 'llama' && char.x <= -4 && char.y <= 1) {
-        //from llama to boa
+        //from llama to articfox
 
         setChar({ x: char.x + 1, y: char.y + 1 })
-        setTiles(tiles2)
+        setTiles(tiles5)
     }
     if (tiles[0][1] === 'jungled2' && char.x <= -4 && char.y <= 1) {
         //gorilla to llama
@@ -34,14 +34,15 @@ function Background({ tiles, char, setTiles, setChar }) {
         setTiles(tiles4)
     }
     if (tiles[1][5] === 'boa' && char.x <= -4 && char.y <= 1) {
-        //from gorlla to fox
+        //from home to boa
 
         setChar({ x: char.x + 1, y: char.y + 1 })
         setTiles(tiles1)
     }
     if (tiles[0][0] === 'arcticmtn' && char.x <= -4 && char.y <= 1){
+        //articfox to home
         setChar({ x: char.x + 1, y: char.y + 1 })
-        setTiles(tiles3)
+        setTiles(tiles2)
 
     }
     return (
