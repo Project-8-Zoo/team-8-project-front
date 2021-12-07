@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useCallback } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './input.css'
 
 function Inputs({ char, setChar }) {
